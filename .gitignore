@@ -1,0 +1,69 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables
+.env
+.env.* # e.g., .env.production, .env.staging
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional npm cache
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# IDE / Editor configs
+.vscode/
+.idea/
+*.swp
+
+# Build directories
+dist/
+build/
+
+# Docker
+docker-compose.override.yml
+Dockerfile.*
+*.bak
+
+# Certificates and secrets
+certs/*.pem
+certs/*.key
+*.crt
+*.pem
+
+# Test output
+test-output/
+
+# TypeScript (if you ever use it)
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# PM2 logs or dump files
+.pnpm-debug.log
+pm2.log
+*.dmp
+
+# Misc
+*.tgz
+*.gz
+*.zip
