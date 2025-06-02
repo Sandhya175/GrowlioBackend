@@ -24,9 +24,9 @@ const db = mysql.createPool({
     rejectUnauthorized: true,
   },
   waitForConnections: true,
-  connectionLimit: 50, // Reduced to avoid hitting DigitalOcean limits
+  connectionLimit: 50,
   queueLimit: 0,
-  connectTimeout: 60000, // 60 seconds
+  connectTimeout: 60000,
 });
 
 (async () => {

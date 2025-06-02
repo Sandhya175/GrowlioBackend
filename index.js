@@ -1,20 +1,19 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import authRoutes from './routes/auth.routes.js';
-
-dotenv.config();
+import memberRoutes from './routes/members.js';
+import cors from 'cors';
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.status(200).json({ message: 'Welcome to GrowLio Backend' });
-  });
-
+app.use(cors());
 app.use(express.json());
-app.use('/auth', authRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/members', memberRoutes);
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-    console.log(`✅ Server running on port ${PORT}`);
+// Add a root route for testing
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to the Growlio Backend API' });
 });
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
