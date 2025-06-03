@@ -46,10 +46,10 @@ Dockerfile.*
 *.bak
 
 # Certificates and secrets
-certs/*.pem
-certs/*.key
-*.crt
-*.pem
+# certs/*.pem
+# certs/*.key
+# *.crt
+# *.pem
 
 # Test output
 test-output/
