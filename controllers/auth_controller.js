@@ -100,7 +100,7 @@ export const forgotPassword = async (req, res) => {
       [email, token, expiresAt, token, expiresAt]
     );
 
-    const resetLink = `http://localhost:3000/reset-password?token=${token}`;
+    const resetLink = `https://growlio-portfolio.vercel.app/reset-password?token=${token}`;
     const emailText = `Hello,\n\nYou requested a password reset for your Growlio account. Click the link below to reset your password:\n${resetLink}\n\nThis link will expire in 1 hour.\n\nIf you did not request a password reset, please ignore this email.\n\nBest,\nGrowlio Team`;
 
     await sendEmail(email, 'Password Reset Request - Growlio', emailText);
